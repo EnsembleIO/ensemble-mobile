@@ -12,6 +12,7 @@
     <author email="technical@beesearch.fr" href="http://beesearch.fr">
         Bee Search Team
     </author>
+    <content src="index.html" />
 
     <access origin="*" />
 

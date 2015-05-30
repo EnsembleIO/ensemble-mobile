@@ -6,16 +6,16 @@
   <title>Bee Mobile</title>
 
   <link href="css/style.css" rel="stylesheet">
-  <link href="lib/ionic/release/css/ionic.min.css" rel="stylesheet">
+  <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
 
   <!-- Ionic Framework -->
-  <script src="lib/ionic/release/js/ionic.js"></script>
+  <script src="lib/ionic/js/ionic.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-animate/angular-animate.js"></script>
   <script src="lib/angular-sanitize/angular-sanitize.js"></script>
   <script src="lib/angular-resource/angular-resource.js"></script>
   <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="lib/ionic/release/js/ionic-angular.js"></script>
+  <script src="lib/ionic/js/ionic-angular.js"></script>
 
   <!-- Cordova & ngCordova -->
   <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
@@ -77,33 +77,34 @@
       <ion-content>
         <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
           <i class="icon ion-search"></i>
-          Recherche
+          Activité
         </a>
         <div class="item item-divider">
-          Filiales
+          Amis
         </div>
         <ion-toggle ng-change="switchIndex('snrf')" ng-model="snrf" class="item item-icon-left">
           <i class="icon ion-home"></i>
-          S.N.R.F.
+          Famille
         </ion-toggle>
         <ion-toggle ng-change="switchIndex('fta')" ng-model="fta" class="item item-icon-left">
-          <i class="icon ion-home"></i>
-          F.T.A.
+          <i class="icon ion-person-stalker"></i>
+          Amis
         </ion-toggle>
         <ion-toggle ng-change="switchIndex('qn')" ng-model="qn" class="item item-icon-left">
-          <i class="icon ion-home"></i>
-          Q.N.
+          <i class="icon ion-medkit"></i>
+          Médical
         </ion-toggle>
         <div class="item item-divider">
-          Donn&eacute;es
+          Agenda
         </div>
-        <ion-toggle ng-change="switchType('customers')" ng-model="customers"  class="item item-icon-left">
-          <i class="icon ion-ios7-people"></i>
-          Clients
-        </ion-toggle>
-        <ion-toggle ng-change="switchType('products')" ng-model="products"  class="item item-icon-left">
-          <i class="icon ion-ios7-pricetag"></i>
-          Produits
+        <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
+          <i class="icon ion-calendar"></i>
+          Aujourd'hui
+        </a>
+        <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
+          <i class="icon ion-calendar"></i>
+          Cette semaine
+        </a>
         </ion-toggle>
       </ion-content>
     </ion-side-menu>

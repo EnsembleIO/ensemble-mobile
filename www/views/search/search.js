@@ -1,7 +1,11 @@
 
-angular.module(_CONTROLLERS_).controller('search', function($scope, $state, oauth2Token, beeSearch, currentItem, searchSettings) {
+angular.module(_CONTROLLERS_).controller('search', function($scope, $state, oauth2Token, beeSearch, currentItem, searchSettings, BACKEND_PROTOCOL, BACKEND_HOST, BACKEND_PORT) { 
 	console.log('### search controller in');
 
+ 	//$scope.url='http://localhost:3000';
+ 	$scope.url= BACKEND_PROTOCOL + '://' + BACKEND_HOST + ':' + BACKEND_PORT;
+	console.log('url : ' + $scope.url);
+	
 	// Check login when app is launched
 	// (search is first page displayed)
 	oauth2Token.checkLogin();

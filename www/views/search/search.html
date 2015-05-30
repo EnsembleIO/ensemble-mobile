@@ -1,10 +1,10 @@
-<ion-view title="Recherche">
+<ion-view title="Activité">
 	<ion-header-bar class="bar-subheader item-input-inset">
 		<label class="item-input-wrapper">
 			<i class="icon ion-search placeholder-icon"></i>
 			<input type="search" placeholder="Recherche" ng-model="search" ng-change="search_onchange()" autofocus>
 		</label>
-	</ion-header-bar>
+	</ion-header-bar> 
 
 	<ion-content>
 		<div class="list">
@@ -17,10 +17,11 @@
 				collection-item-width="'100%'"
 				collection-item-height="74"
 				ng-click="item_onclick(item)">
-				<img ng-src="images/icon-{{item._index}}.png">
-				<h2 style="display:inline;">{{item._source.name}} </h2>
-                <h6>siren : 123-567890</h6>
-                <h6 style="display:inline;">{{item._source.range | stars}}</h6>
+				<img ng-src="{{url}}/images/people/{{item._source.actor.displayName}}.png">
+				<img ng-src="{{url}}/images/other/{{item._source.verb}}.png" style="width:12px">
+                <h2 style="display:inline;">{{item._source.actor.displayName}} </h2>
+
+                <h6 style="display;">{{item._source.object.displayName}}</h6>
 			</div>
 		</div>
 	</ion-content>

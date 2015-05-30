@@ -4,7 +4,7 @@
   "description": "Bee Mobile : a frontend written with Ionic, Phonegap, Angular & love!",
   "version": "1.0.0",
   "devDependencies": {
-    "ionic": "1.0.0-beta.13",
+    "ionic": "driftyco/ionic-bower#1.0.0",
     "angular-resource": "~1.2.17",
     "jquery": "1.x.x",
     "highcharts-release": "~4.0.1",
