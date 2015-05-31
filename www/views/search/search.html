@@ -12,12 +12,16 @@
 				<i class="icon ion-sad"></i>
 				Aucun résultat
 			</p>
-			<ion-item item-height="150px" class="item item-avatar my-item" collection-repeat="item in items" ng-click="item_onclick(item)">
-					<img ng-src="{{url}}/images/people/{{item._source.actor.displayName}}.png">
-					<div style="background-color:#ECF5FF;height:100px;margin:1px 1px 1px 1px">
-						<img ng-src="{{url}}/images/other/{{item._source.verb}}.png" style="width:12px">
-		                <h2 style="display:inline;margin:0px 0px 0px 8px"><b>{{item._source.actor.displayName}}</b></h2>
-		                <h4 style="display:inline;color:#0C56AB;float:right">{{item._source.published | date:'EEEE dd MMM HH:mm'}}</h4>
+	 			<ion-item item-height="170px" class="item item-avatar my-item" collection-repeat="item in items" ng-click="item_onclick(item)">
+				<img ng-src="{{url}}/images/other/{{item._source.verb}}.png"  style="height:20px;width:20px">
+					<div style="background-color:#ECF5FF;height:120px;margin:1px 1px 1px 1px">
+		                <div>
+							<img ng-src="{{url}}/images/people/{{item._source.actor.displayName}}.png" style="margin:-10px;width:50px" >
+		                	<div style="display:inline;margin:15px 15px 15px 15px">
+		                		<h2 style="display:inline;vertical-align:top"><b style="display:inline;vertical-align:top;margin-top:10px">{{item._source.actor.displayName}}</b></h2>
+		               			<h4 style="display:inline;color:#0C56AB;float:right">{{item._source.published | date:'EEEE dd MMM HH:mm'}}</h4>
+		               		</div>
+		                </div>
 		                <div style="display;margin:6px 0px 0px 8px;">
 			                <h2>{{item._source.object.displayName}}</h2>
 			                <div ng-if="item._source.object.objectType == 'photo'" style="margin:0px 0px 0px 8px">

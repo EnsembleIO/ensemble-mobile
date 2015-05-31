@@ -32,6 +32,11 @@
       url: '/device',
       templateUrl: 'views/phonegap/device.html',
       controller: 'device'
+    })
+    .state('call', {
+      url: '/call',
+      templateUrl: 'views/details/call.html',
+      controller: 'call'
     });
     
     $urlRouterProvider.otherwise('/search');

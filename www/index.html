@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" ng-app="beemobile">
+<html lang="fr" ng-app="ensemble">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -41,6 +41,7 @@
   <!-- Controllers -->
   <script src="index.js"></script>
   <script src="views/app/app-login.js"></script>
+  <script src="views/details/call.js"></script>
   <script src="views/details/company.js"></script>
   <script src="views/details/order.js"></script>
   <script src="views/phonegap/device.js"></script>
@@ -74,14 +75,14 @@
       <ion-header-bar class="bar bar-header bar-dark">
         <h1 class="title">Menu</h1>
       </ion-header-bar>
+
       <ion-content>
         <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
           <i class="icon ion-search"></i>
-          Activité
+          Journal
         </a>
-        <div class="item item-divider">
-          Amis
-        </div>
+
+        <div class="item item-divider">Ensemble</div>
         <ion-toggle ng-change="switchIndex('snrf')" ng-model="snrf" class="item item-icon-left">
           <i class="icon ion-home"></i>
           Famille
@@ -94,9 +95,8 @@
           <i class="icon ion-medkit"></i>
           Médical
         </ion-toggle>
-        <div class="item item-divider">
-          Agenda
-        </div>
+
+        <div class="item item-divider">Agenda</div>
         <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
           <i class="icon ion-calendar"></i>
           Aujourd'hui
@@ -105,7 +105,26 @@
           <i class="icon ion-calendar"></i>
           Cette semaine
         </a>
-        </ion-toggle>
+        </div>
+
+        <div class="item item-divider">Suivi</div>
+        <a nav-clear class="item item-icon-left" ng-click="goTo('device')">
+          <i class="icon ion-ios-pulse-strong"></i>
+          Tensiometre
+        </a>
+        <a nav-clear class="item item-icon-left" ng-click="goTo('notifications')">
+          <i class="icon ion-ios-body"></i>
+          Activité
+        </a>
+        </div>
+
+        <div class="item item-divider">Contacter</div>
+        <a nav-clear class="item item-icon-left" ng-click="goTo('call')">
+          <i class="icon ion-chatbubbles"></i>
+          Contacter un proche
+        </a>
+        </div>
+
       </ion-content>
     </ion-side-menu>
   </ion-side-menus>

@@ -5,7 +5,7 @@
  *
  */
 // some globals.
-var _APP_         = 'beemobile'
+var _APP_         = 'ensemble'
   , _CONTROLLERS_ = _APP_ + '.controllers'
   , _DIRECTIVES_  = _APP_ + '.directives'
   , _FILTERS_     = _APP_ + '.filters'
