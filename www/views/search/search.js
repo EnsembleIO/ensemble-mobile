@@ -5,7 +5,24 @@ angular.module(_CONTROLLERS_).controller('search', function($scope, $state, oaut
  	//$scope.url='http://localhost:3000';
  	$scope.url= BACKEND_PROTOCOL + '://' + BACKEND_HOST + ':' + BACKEND_PORT;
 	console.log('url : ' + $scope.url);
-	
+
+	$scope.search = 'Margaux';
+
+	if ($scope.search) {
+		console.log("Searching:" + $scope.search);
+		beeSearch.query({'search': $scope.search, 'indexes': searchSettings.getIndexes(), 'types':searchSettings.getTypes()}, function(data) {
+			$scope.items = data;
+			if ($scope.items.length === 0) {
+				$scope.noresult = true;
+			} else {
+				$scope.noresult = false;
+			}
+		});
+	} else {
+		// Search string is empty
+		$scope.items = null;
+	}
+
 	// Check login when app is launched
 	// (search is first page displayed)
 	oauth2Token.checkLogin();
