@@ -1,23 +1,20 @@
 <ion-view title="Notifications">
 	<ion-content padding="true">
-		<button class="button button-block button-assertive" ng-click="alertNotify()">
-			Alert
-		</button>
+	    <div class="card">
+	      <div class="item item-divider">
+	        Information activity
+	      </div>
+	      <div class="item item-text-wrap">
+	        Model : withings Healthcare
+	      </div>
+	      <div class="item item-text-wrap">
+	        Version : 1.2.9
+	      </div>
+	      <div class="item item-text-wrap">
+	        UUID : 110e8400-e29b-11d4-a716-44440
+	      </div>
+	    </div>
 
-		<button class="button button-block button-positive" ng-click="confirmNotify()">
-			Confirm
-		</button>
-
-		<button class="button button-block button-royal" ng-click="promptNotify()">
-			Prompt
-		</button>
-
-		<button class="button button-block button-balanced" ng-click="vibrateNotify()">
-			Vibrate
-		</button>
-
-		<button class="button button-block button-energized" ng-click="beepNotify()">
-			Beep
-		</button>
+	    <highchart config="topActivity"></highchart>
 	</ion-content>
 </ion-view>
