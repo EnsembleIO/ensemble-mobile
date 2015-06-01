@@ -23,25 +23,35 @@
         templateUrl: 'views/details/order.html',
         controller: 'order'
     })
-    .state('mynetwork', {
-      url: '/mynetwork',
-      templateUrl: 'views/details/mynetwork.html',
-      controller: 'mynetwork'
+    .state('network', {
+      url: '/network',
+      templateUrl: 'views/network/network.html',
+      controller: 'network'
     })
     .state('invitation', {
       url: '/invitation',
-      templateUrl: 'views/details/invitation.html',
+      templateUrl: 'views/network/invitation.html',
       controller: 'invitation'
     })    
-    .state('notifications', {
-      url: '/notifications',
-      templateUrl: 'views/phonegap/notifications.html',
-      controller: 'notifications'
-    })
+    .state('find', {
+      url: '/find',
+      templateUrl: 'views/network/find.html',
+      controller: 'find'
+    })    
     .state('device', {
       url: '/device',
-      templateUrl: 'views/phonegap/device.html',
+      templateUrl: 'views/device/device.html',
       controller: 'device'
+    })
+    .state('activity', {
+      url: '/activity',
+      templateUrl: 'views/device/activity.html',
+      controller: 'activity'
+    })
+    .state('frequence', {
+      url: '/frequence',
+      templateUrl: 'views/device/frequence.html',
+      controller: 'frequence'
     })
     .state('call', {
       url: '/call',

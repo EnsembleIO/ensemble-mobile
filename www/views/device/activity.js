@@ -1,5 +1,5 @@
-angular.module(_CONTROLLERS_).controller('notifications', function($scope, notificationService) {
-	console.log('### notifications controller in');
+angular.module(_CONTROLLERS_).controller('activity', function($scope, notificationService) {
+	console.log('### activity controller in');
 	
    	$scope.topActivity = {
 
@@ -163,5 +163,5 @@ angular.module(_CONTROLLERS_).controller('notifications', function($scope, notif
         }]
 	}
 
-	console.log('### notifications controller out');
+	console.log('### activity controller out');
 });

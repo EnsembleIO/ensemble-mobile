@@ -9,14 +9,14 @@ angular.module(_CONTROLLERS_).controller('invitation', function($scope, BACKEND_
         // Store the current line to use it in the next screen
         currentItem.set(item);
         // Go to next screen
-        $state.go('call');
+        $state.go('invitation');
     }
 
    $scope.rechercher_onclick = function(item) {
         // Store the current line to use it in the next screen
         currentItem.set(item);
         // Go to next screen
-        $state.go('call');
+        $state.go('find');
     }
 
 

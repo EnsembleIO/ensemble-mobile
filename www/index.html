@@ -41,14 +41,16 @@
   <!-- Controllers -->
   <script src="index.js"></script>
   <script src="views/app/app-login.js"></script>
-  <script src="views/details/call.js"></script>
-  <script src="views/details/mynetwork.js"></script>
-  <script src="views/details/invitation.js"></script>
+  <script src="views/call/call.js"></script>
+  <script src="views/network/network.js"></script>
+  <script src="views/network/invitation.js"></script>
+  <script src="views/network/find.js"></script>
+  <script src="views/device/device.js"></script>
+  <script src="views/device/frequence.js"></script>
+  <script src="views/device/activity.js"></script>
+  <script src="views/search/search.js"></script>
   <script src="views/details/company.js"></script>
   <script src="views/details/order.js"></script>
-  <script src="views/phonegap/device.js"></script>
-  <script src="views/phonegap/notifications.js"></script>
-  <script src="views/search/search.js"></script>
 </head>
 
 <body ng-controller="index">
@@ -79,48 +81,28 @@
       </ion-header-bar>
 
       <ion-content>
+        <div class="item item-divider"></div>
         <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
           <i class="icon ion-search"></i>
-          Journal
+          Le journal
         </a>
 
-        <div class="item item-divider">Réseau</div>
-        <a nav-clear class="item item-icon-left" ng-click="goTo('mynetwork')">
+        <a nav-clear class="item item-icon-left" ng-click="goTo('network')">
           <i class="icon ion-network"></i>
-          Le réseau de Margaux
+          Le réseau
         </a>
-        <a nav-clear class="item item-icon-left" ng-click="goTo('invitation')">
-          <i class="icon ion-person-add"></i>
-          Demande d'invitation
-        </a>
-        <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
-          <i class="icon ion-person-stalker"></i>
-          Inviter
-        </a>        
 
-        <div class="item item-divider">Agenda</div>
         <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
           <i class="icon ion-calendar"></i>
-          Aujourd'hui
+          L'agenda
         </a>
-        <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
-          <i class="icon ion-calendar"></i>
-          Cette semaine
-        </a>
-        </div>
 
-        <div class="item item-divider">Suivi</div>
         <a nav-clear class="item item-icon-left" ng-click="goTo('device')">
           <i class="icon ion-ios-pulse-strong"></i>
-          Tensiometre
+          Les objets
         </a>
-        <a nav-clear class="item item-icon-left" ng-click="goTo('notifications')">
-          <i class="icon ion-ios-body"></i>
-          Activité
-        </a>
-        </div>
 
-        <div class="item item-divider">Contacter</div>
+        <div class="item item-divider"></div>
         <a nav-clear class="item item-icon-left" ng-click="goTo('call')">
           <i class="icon ion-chatbubbles"></i>
           Contacter un proche

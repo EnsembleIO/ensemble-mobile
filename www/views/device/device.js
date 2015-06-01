@@ -1,17 +1,17 @@
-angular.module(_CONTROLLERS_).controller('mynetwork', function($scope, $state, BACKEND_PROTOCOL, BACKEND_HOST, BACKEND_PORT) {
+angular.module(_CONTROLLERS_).controller('device', function($scope, $state, BACKEND_PROTOCOL, BACKEND_HOST, BACKEND_PORT) {
     console.log('### mynetwork controller in');
 
     $scope.url= BACKEND_PROTOCOL + '://' + BACKEND_HOST + ':' + BACKEND_PORT;
     console.log('url : ' + $scope.url);
     
-	   $scope.invitation_onclick = function() {
+	   $scope.activity_onclick = function() {
 	        // Go to next screen
-	        $state.go('invitation');
+	        $state.go('activity');
 	    }
 	   
-	   $scope.rechercher_onclick = function() {
+	   $scope.frequence_onclick = function() {
 	        // Go to next screen
-	        $state.go('search');
+	        $state.go('frequence');
 	    }
 
     console.log('### mynetwork controller out');

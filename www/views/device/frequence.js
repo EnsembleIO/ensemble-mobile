@@ -1,8 +1,8 @@
-angular.module(_CONTROLLERS_).controller('device', function($scope, $ionicPlatform) {
-    console.log('### device controller in');
+angular.module(_CONTROLLERS_).controller('frequence', function($scope, $ionicPlatform) {
+    console.log('### frequence controller in');
     
 
-   	$scope.top5ProductsChart = {
+   	$scope.topFrequence = {
         title: {
             text: 'Monthly Average Tension',
             x: -20 //center
@@ -43,5 +43,5 @@ angular.module(_CONTROLLERS_).controller('device', function($scope, $ionicPlatfo
         }]
 	}
 
-    console.log('### device controller out');
+    console.log('### frequence controller out');
 });
