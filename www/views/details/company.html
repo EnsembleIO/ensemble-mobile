@@ -1,93 +1,14 @@
 <ion-view title="Détails">
-	<ion-content>
+<ion-content>
 
-		<ion-item>	
-			<h2 style="color:#ed3d2f"><b>{{item.name}} </b></h2>
-            <h5>Siren: 1234-56789</h5>
-        </ion-item>
 
-        <a class="item">
-            <h3 style="display:inline;"><b>CA: {{item.total | currency:"€"}} </b></h3>
-            <h6 style="display:inline;">max: {{item.max | currency:"€"}} - avg: {{item.avg | currency:"€"}}</h6>
+<div class="card">
+	<div class="item item-text-wrap">
+		<h2>Not implemented :-(</h2>
+		<p>please contact : <i class="icon ion-email"></i> support@ensemble.io</p>
+	</div>
+</div>
 
-        </a>
 
-        <div ng-repeat="item in item.contacts" ng-switch="item.type">
-
-			<div ng-switch-when="admin">
-				<div class="item item-avatar">
-					<img ng-src="{{item.avatar}}">
-					<h3>Administratif</h3>
-					<p>{{item.firstName}} {{item.lastName}} <b>{{item.phone}}</b> </br>
-					{{item.email}}</p>
-				</div>				
-			</div>
-
-			<div ng-switch-when="sales">
-				<div class="item item-avatar">
-					<img ng-src="{{item.avatar}}">
-					<h3>Ventes</h3>
-					<p>{{item.firstName}} {{item.lastName}} <b>{{item.phone}}</b> </br>
-					{{item.email}}</p>
-				</div>
-			</div>
-			<div ng-switch-when="tech">
-				<div class="item item-avatar">
-					<img ng-src="{{item.avatar}}">
-					<h3>Technique</h3>
-					<p>{{item.firstName}} {{item.lastName}} <b>{{item.phone}}</b> </br>
-					{{item.email}}</p>
-				</div>		
-			</div>
-		</div>
-
-		<div ng-repeat="item in item._source.addresses" ng-switch="item.type">
-			<div ng-switch-when="sales">
-				<div class="item item-icon-left">
-					<i class="icon ion-card"></i>
-					<h3>Adresse de facturation</h3>
-					<p>{{item.street}} </br>
-					{{item.zip}} <b>{{item.city}}</b></p>
-				</div>
-			</div>
-			<div ng-switch-when="shipping">
-				<div class="item item-icon-left">
-					<i class="icon ion-plane"></i>
-					<h3>Addresse de livraison</h3>
-					<p>{{item.street}} </br>
-					{{item.zip}} <b>{{item.city}}</b></p>
-				</div>
-			</div>
-		</div>
-
-        <highchart config="customerHistoryOrderChart"></highchart>
-
-        <a class="item item-icon-left" ng-click="item_onclick(item)">
-			<i class="icon ion-cash"></i>
-			<h3>Commandes</h3>
-			<span class="badge badge-assertive">{{item.orders.length}}</span>
-		</a>
-
-        <a class="item item-icon-left">
-			<i class="icon ion-star"></i>
-			<h3>Devis</h3>
-			<span class="badge badge-assertive">3</span>
-		</a>
-
-        <a class="item item-icon-left">
-            <i class="icon ion-person-stalker"></i>
-            <h3>Appels & Demandes</h3>
-            <span class="badge badge-assertive">25</span>
-        </a>
-
-        <a class="item item-icon-left">
-            <i class="icon ion-bug"></i>
-            <h3>Problemes en cours</h3>
-            <span class="badge badge-assertive">5</span>
-        </a>
-
-        <highchart config="top5ProductsChart"></highchart>
-        <highchart config="customerCateroyOrderChart"></highchart>
-
-    </ion-content>
+</ion-content>
 </ion-view>

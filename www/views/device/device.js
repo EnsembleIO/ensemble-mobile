@@ -1,5 +1,5 @@
 angular.module(_CONTROLLERS_).controller('device', function($scope, $state, BACKEND_PROTOCOL, BACKEND_HOST, BACKEND_PORT) {
-    console.log('### mynetwork controller in');
+    console.log('### device controller in');
 
     $scope.url= BACKEND_PROTOCOL + '://' + BACKEND_HOST + ':' + BACKEND_PORT;
     console.log('url : ' + $scope.url);
@@ -14,5 +14,5 @@ angular.module(_CONTROLLERS_).controller('device', function($scope, $state, BACK
 	        $state.go('frequence');
 	    }
 
-    console.log('### mynetwork controller out');
+    console.log('### device controller out');
 });

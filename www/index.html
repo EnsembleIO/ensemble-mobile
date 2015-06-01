@@ -8,6 +8,9 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
 
+  <!-- Google map -->
+  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
+
   <!-- Ionic Framework -->
   <script src="lib/ionic/js/ionic.js"></script>
   <script src="lib/angular/angular.js"></script>
@@ -42,6 +45,7 @@
   <script src="index.js"></script>
   <script src="views/app/app-login.js"></script>
   <script src="views/call/call.js"></script>
+  <script src="views/calendar/calendar.js"></script>
   <script src="views/network/network.js"></script>
   <script src="views/network/invitation.js"></script>
   <script src="views/network/find.js"></script>
@@ -92,7 +96,7 @@
           Le réseau
         </a>
 
-        <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
+        <a nav-clear class="item item-icon-left" ng-click="goTo('calendar')">
           <i class="icon ion-calendar"></i>
           L'agenda
         </a>
@@ -104,7 +108,7 @@
 
         <div class="item item-divider"></div>
         <a nav-clear class="item item-icon-left" ng-click="goTo('call')">
-          <i class="icon ion-chatbubbles"></i>
+          <i class="icon ion-android-call"></i>
           Contacter un proche
         </a>
         </div>

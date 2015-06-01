@@ -38,6 +38,11 @@
       templateUrl: 'views/network/find.html',
       controller: 'find'
     })    
+    .state('calendar', {
+      url: '/calendar',
+      templateUrl: 'views/calendar/calendar.html',
+      controller: 'calendar'
+    })
     .state('device', {
       url: '/device',
       templateUrl: 'views/device/device.html',
@@ -55,7 +60,7 @@
     })
     .state('call', {
       url: '/call',
-      templateUrl: 'views/details/call.html',
+      templateUrl: 'views/call/call.html',
       controller: 'call'
     });
     
