@@ -42,6 +42,8 @@
   <script src="index.js"></script>
   <script src="views/app/app-login.js"></script>
   <script src="views/details/call.js"></script>
+  <script src="views/details/mynetwork.js"></script>
+  <script src="views/details/invitation.js"></script>
   <script src="views/details/company.js"></script>
   <script src="views/details/order.js"></script>
   <script src="views/phonegap/device.js"></script>
@@ -82,19 +84,19 @@
           Journal
         </a>
 
-        <div class="item item-divider">Ensemble</div>
-        <ion-toggle ng-change="switchIndex('snrf')" ng-model="snrf" class="item item-icon-left">
-          <i class="icon ion-home"></i>
-          Famille
-        </ion-toggle>
-        <ion-toggle ng-change="switchIndex('fta')" ng-model="fta" class="item item-icon-left">
+        <div class="item item-divider">Réseau</div>
+        <a nav-clear class="item item-icon-left" ng-click="goTo('mynetwork')">
+          <i class="icon ion-network"></i>
+          Le réseau de Margaux
+        </a>
+        <a nav-clear class="item item-icon-left" ng-click="goTo('invitation')">
+          <i class="icon ion-person-add"></i>
+          Demande d'invitation
+        </a>
+        <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
           <i class="icon ion-person-stalker"></i>
-          Amis
-        </ion-toggle>
-        <ion-toggle ng-change="switchIndex('qn')" ng-model="qn" class="item item-icon-left">
-          <i class="icon ion-medkit"></i>
-          Médical
-        </ion-toggle>
+          Inviter
+        </a>        
 
         <div class="item item-divider">Agenda</div>
         <a nav-clear class="item item-icon-left" ng-click="goTo('search')">

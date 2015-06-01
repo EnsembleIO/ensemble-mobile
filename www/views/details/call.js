@@ -3,6 +3,6 @@ angular.module(_CONTROLLERS_).controller('call', function($scope, BACKEND_PROTOC
 
     $scope.url= BACKEND_PROTOCOL + '://' + BACKEND_HOST + ':' + BACKEND_PORT;
     console.log('url : ' + $scope.url);
-    
+
     console.log('### call controller out');
 });

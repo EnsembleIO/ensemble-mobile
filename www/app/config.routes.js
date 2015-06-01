@@ -23,6 +23,16 @@
         templateUrl: 'views/details/order.html',
         controller: 'order'
     })
+    .state('mynetwork', {
+      url: '/mynetwork',
+      templateUrl: 'views/details/mynetwork.html',
+      controller: 'mynetwork'
+    })
+    .state('invitation', {
+      url: '/invitation',
+      templateUrl: 'views/details/invitation.html',
+      controller: 'invitation'
+    })    
     .state('notifications', {
       url: '/notifications',
       templateUrl: 'views/phonegap/notifications.html',

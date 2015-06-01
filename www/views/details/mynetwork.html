@@ -1,0 +1,38 @@
+<ion-view title="Mon réseau">
+
+	<ion-content padding="true">
+
+	<div class="list card">
+
+		<div class="item item-avatar" style="background-color:#ECF5FF">
+			<img ng-src="{{url}}/images/people/Margaux.png">
+		    <h2>Margaux</h2>
+		    <p>Habite à Nantes</p>
+		</div>
+		<div class="item item-image">
+			<img ng-src="{{url}}/images/activity/Network.png">
+		</div>
+
+	</div>
+
+    </ion-content>
+
+	<ion-footer-bar align-title="left" class="bar-positive">
+
+		<div class="buttons" ng-click="invitation_onclick()">
+	        <button class="button"><i class="icon ion-person-add"></i>
+	          Invitation
+	        </button>
+	    </div>
+	  	
+	  	<h1 class="title">Title!</h1>
+
+	    <div class="buttons" ng-click="rechercher_onclick()">
+	        <button class="button" align-title="right"><i class="icon ion-person-add"></i>
+	          Rechercher
+	        </button>
+		</div>
+
+	</ion-footer-bar>
+
+</ion-view>
