@@ -20,7 +20,8 @@
 		            <div>
 						<img ng-src="{{url}}/images/people/{{item._source.actor.displayName}}.png" onerror="this.src='http://localhost:3000/images/people/Ensemble.png'" style="margin:-10px;width:50px" >
 	                	<div style="display:inline;margin:15px 15px 15px 15px">
-	                		<h2 style="display:inline;vertical-align:top"><b style="display:inline;vertical-align:top;margin-top:10px">{{item._source.actor.displayName}}</b></h2>
+	                		<h2 style="display:inline;vertical-align:bottom"><b style="display:inline;vertical-align:bottom;margin-top:10px">{{item._source.actor.displayName}}</b></h2>
+	                		<h4 style="display:inline;horizontal-align:right;color:grey;margin-top:50px">mon@mail.com</h4>
 	               		</div>
 	                </div>
 	                <div style="display;margin:6px 0px 0px 8px;">
@@ -31,8 +32,8 @@
 	            	</div>
         		</div>
                 <div ng-if="item._source.verb == 'post'" style="margin:10px 1px 1px 1px">
-	            	<h2 style="display:inline;color:#0C56AB;text-align:left"><i class="icon ion-share"></i> Partager</h2>   
-	            	<h2 style="display:inline;color:#0C56AB;text-align:right"><i class="icon ion-email"></i> Commenter</h2>
+	            	<h3 style="display:inline;color:#0C56AB;text-align:left"><i class="icon ion-share"></i> Partager</h3>   
+	            	<h3 style="display:inline;color:#0C56AB;text-align:right"><i class="icon ion-email"></i> Commenter</h3>
             	</div>
 			</ion-item>
 		</div>

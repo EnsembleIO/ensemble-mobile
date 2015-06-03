@@ -56,7 +56,7 @@ angular.module(_CONTROLLERS_).controller('search', function($scope, $state, oaut
 	 		} else if (item._source.object.objectType == 'rendezvous') {
 	 			return "background-color:#B3CFF9;height:120px;margin:-5px -5px -5px -5px"
 	 		} else {
-	 			return "height:120px;margin:-5px -5px -5px -5px"
+	 			return "background-color:#ECF1F6;height:120px;margin:-5px -5px -5px -5px"
 	 		}
 	 	}
 	}
