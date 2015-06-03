@@ -29,7 +29,8 @@ angular.module(_APP_, [
   'ngResource',
   'ionic',
   'ngCordova',
-  'highcharts-ng'
+  'highcharts-ng',
+  'uiGmapgoogle-maps'
 ]);
 
 // intial run code here

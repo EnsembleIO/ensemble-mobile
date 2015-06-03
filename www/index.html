@@ -8,9 +8,6 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
 
-  <!-- Google map -->
-  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
-
   <!-- Ionic Framework -->
   <script src="lib/ionic/js/ionic.js"></script>
   <script src="lib/angular/angular.js"></script>
@@ -23,11 +20,16 @@
   <!-- Cordova & ngCordova -->
   <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
   <script src="cordova.js"></script>
-
+  
   <!-- Highcharts -->
   <script src="lib/jquery/dist/jquery.min.js"></script>
   <script src="lib/highcharts-release/highcharts.js"></script>
   <script src="lib/highcharts-ng/dist/highcharts-ng.min.js"></script>
+
+  <!-- Google map -->
+  <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script src="lib/lodash/dist/lodash.min.js"></script>
+  <script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
 
   <!-- App -->
   <script src="app/app.js"></script>
@@ -45,7 +47,7 @@
   <script src="index.js"></script>
   <script src="views/app/app-login.js"></script>
   <script src="views/call/call.js"></script>
-  <script src="views/calendar/calendar.js"></script>
+  <script src="views/calendar/agenda.js"></script>
   <script src="views/network/network.js"></script>
   <script src="views/network/invitation.js"></script>
   <script src="views/network/find.js"></script>
@@ -88,22 +90,22 @@
         <div class="item item-divider"></div>
         <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
           <i class="icon ion-search"></i>
-          Le journal
+          Journal
         </a>
 
         <a nav-clear class="item item-icon-left" ng-click="goTo('network')">
-          <i class="icon ion-network"></i>
-          Le réseau
+          <i class="icon ion-person-add"></i>
+          Aidants
         </a>
 
-        <a nav-clear class="item item-icon-left" ng-click="goTo('calendar')">
+        <a nav-clear class="item item-icon-left" ng-click="goTo('agenda')">
           <i class="icon ion-calendar"></i>
-          L'agenda
+          Agenda
         </a>
 
         <a nav-clear class="item item-icon-left" ng-click="goTo('device')">
           <i class="icon ion-ios-pulse-strong"></i>
-          Les objets
+          Santé
         </a>
 
         <div class="item item-divider"></div>

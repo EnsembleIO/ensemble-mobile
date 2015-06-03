@@ -17,6 +17,9 @@ It will install npm dependencies and bower dependencies.
     cordova plugin add org.apache.cordova.device
     cordova plugin add org.apache.cordova.statusbar
     cordova plugin add https://github.com/driftyco/ionic-plugins-keyboard.git
+    cordova plugin add https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin.git
+    
+    cordova build
 
 ## Configuring environment
 

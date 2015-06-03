@@ -9,6 +9,7 @@
     "jquery": "1.x.x",
     "highcharts-release": "~4.0.1",
     "highcharts-ng": "~0.0.7",
-    "ngCordova": "0.1.2-alpha"
+    "ngCordova": "0.1.2-alpha",
+    "angular-google-maps":"2.1.1"
   }
 }

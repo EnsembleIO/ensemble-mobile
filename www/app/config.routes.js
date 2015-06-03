@@ -38,10 +38,10 @@
       templateUrl: 'views/network/find.html',
       controller: 'find'
     })    
-    .state('calendar', {
-      url: '/calendar',
-      templateUrl: 'views/calendar/calendar.html',
-      controller: 'calendar'
+    .state('agenda', {
+      url: '/agenda',
+      templateUrl: 'views/calendar/agenda.html',
+      controller: 'agenda'
     })
     .state('device', {
       url: '/device',

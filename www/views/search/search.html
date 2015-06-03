@@ -1,8 +1,8 @@
-<ion-view title="Journal">
+<ion-view title="Journal" class="bar-energized">
 	<ion-header-bar class="bar-subheader item-input-inset">
 		<label class="item-input-wrapper">
 			<i class="icon ion-search placeholder-icon"></i>
-			<input type="search" placeholder="Recherche" ng-model="search" ng-change="search_onchange()" autofocus>
+			<input type="search" ng-submit="submit()" placeholder="Partager avec l'entourage de Margaux" ng-model="post" autofocus />
 		</label>
 	</ion-header-bar> 
 
@@ -15,7 +15,8 @@
 	 			<ion-item item-height="185px" class="item item-avatar my-item" collection-repeat="item in items" ng-click="item_onclick(item)">
 				<img ng-src="{{url}}/images/other/{{item._source.object.objectType}}.png" style="margin-top:50px">
 				<h4 style="color:#003D83;text-align:right">{{item._source.published | date:'EEEE dd MMM HH:mm'}}</h4>
-				<div style="background-color:#ECF5FF;height:120px;margin:-5px -5px -5px -5px">
+				
+				<div style="{{functionThatReturnsStyle(item)}}">
 		            <div>
 						<img ng-src="{{url}}/images/people/{{item._source.actor.displayName}}.png" onerror="this.src='http://localhost:3000/images/people/Ensemble.png'" style="margin:-10px;width:50px" >
 	                	<div style="display:inline;margin:15px 15px 15px 15px">
