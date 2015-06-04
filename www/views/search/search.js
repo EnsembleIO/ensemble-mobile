@@ -1,5 +1,7 @@
 
-angular.module(_CONTROLLERS_).controller('search', function($scope, $state, oauth2Token, beeSearch, currentItem, searchSettings, BACKEND_PROTOCOL, BACKEND_HOST, BACKEND_PORT) { 
+var app = angular.module(_CONTROLLERS_);
+
+app.controller('search', function($scope, $state, oauth2Token, beeSearch, currentItem, searchSettings, BACKEND_PROTOCOL, BACKEND_HOST, BACKEND_PORT) { 
 	console.log('### search controller in');
 
  	$scope.url= BACKEND_PROTOCOL + '://' + BACKEND_HOST + ':' + BACKEND_PORT;
@@ -41,7 +43,35 @@ angular.module(_CONTROLLERS_).controller('search', function($scope, $state, oaut
 		}
 	}
 
-
+	var createMessageFromInput = function(input) {
+		var messsage = {
+			"_index": "hackathon",
+			"_type": "news",
+			"_id": "AU2Mxe1Rf4cn5mrPOST1",
+			"_score": 0.9459328,
+			"_source": {
+				"newsid": "999",
+				"published": "2015-06-04T12:45:00.000Z",
+			"actor": {
+				"id": "urn:ensemble:member:jean",
+				"objectType": "member",
+				"displayName": "Jean"
+			},
+			"verb": "post",
+			"object": {
+				"id": "urn:ensemble:news:999",
+				"objectType": "message",
+				"displayName": input
+			},
+			"target": {
+				"id": "urn:ensemble:member:margaux",
+				"objectType": "member",
+				"displayName": "Margaux"
+			}
+		}
+		};
+		return message;
+	};
 
 	$scope.item_onclick = function(item) {
 		// Store the current line to use it in the next screen
@@ -65,35 +95,19 @@ angular.module(_CONTROLLERS_).controller('search', function($scope, $state, oaut
 	 	}
 	}
 
-	$scope.createMessageFromInput = function(input) {
-		var messsage = {
-			"_index": "hackathon",
-			"_type": "news",
-			"_id": "AU2Mxe1Rf4cn5mrPOST1",
-			"_score": 0.9459328,
-			"_source": {
-				"newsid": "999",
-				"published": "2015-06-04T12:45:00.000Z",
-				"actor": {
-					"id": "urn:ensemble:member:jean",
-					"objectType": "member",
-					"displayName": "Jean"
-				},
-				"verb": "post",
-				"object": {
-					"id": "urn:ensemble:news:999",
-					"objectType": "message",
-					"displayName": input
-				},
-				"target": {
-					"id": "urn:ensemble:member:margaux",
-					"objectType": "member",
-					"displayName": "Margaux"
-				}
-			}
-		};
-		return message;
-	};
-
 	console.log('### search controller out');
+});
+
+app.directive('ngEnter', function () {
+    return function (scope, element, attrs) {
+        element.bind("keydown keypress", function (event) {
+            if(event.which === 13) {
+                scope.$apply(function (){
+                    scope.$eval(attrs.ngEnter);
+                });
+
+                event.preventDefault();
+            }
+        });
+    };
 });
