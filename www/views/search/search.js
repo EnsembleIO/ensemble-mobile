@@ -33,11 +33,15 @@ angular.module(_CONTROLLERS_).controller('search', function($scope, $state, oaut
 		console.log("submit !");
 		if ($scope.search) {
 			console.log("Searching:" + $scope.search);
+			var message = createMessageFromInput($scope.search);
+			$scope.items.push(message);
 		} else {
 			// Search string is empty
 			$scope.items = null;
 		}
 	}
+
+
 
 	$scope.item_onclick = function(item) {
 		// Store the current line to use it in the next screen
@@ -60,6 +64,36 @@ angular.module(_CONTROLLERS_).controller('search', function($scope, $state, oaut
 	 		}
 	 	}
 	}
+
+	$scope.createMessageFromInput = function(input) {
+		var messsage = {
+			"_index": "hackathon",
+			"_type": "news",
+			"_id": "AU2Mxe1Rf4cn5mrPOST1",
+			"_score": 0.9459328,
+			"_source": {
+				"newsid": "999",
+				"published": "2015-06-04T12:45:00.000Z",
+				"actor": {
+					"id": "urn:ensemble:member:jean",
+					"objectType": "member",
+					"displayName": "Jean"
+				},
+				"verb": "post",
+				"object": {
+					"id": "urn:ensemble:news:999",
+					"objectType": "message",
+					"displayName": input
+				},
+				"target": {
+					"id": "urn:ensemble:member:margaux",
+					"objectType": "member",
+					"displayName": "Margaux"
+				}
+			}
+		};
+		return message;
+	};
 
 	console.log('### search controller out');
 });

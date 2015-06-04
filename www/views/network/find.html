@@ -2,6 +2,31 @@
 
 <ion-content padding="true">
 
+
+<ul class="list">
+
+  <li class="item item-toggle">
+     Aidants
+     <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+  <li class="item item-toggle">
+     Professionel
+     <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+</ul>
+
 	<ui-gmap-google-map center='map.center' zoom='map.zoom'>
 
 	    <ui-gmap-circle ng-repeat="c in circles track by c.id" center="c.center" stroke="c.stroke" fill="c.fill" radius="c.radius"
