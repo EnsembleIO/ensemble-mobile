@@ -55,6 +55,7 @@
   <script src="views/device/device.js"></script>
   <script src="views/device/frequence.js"></script>
   <script src="views/device/activity.js"></script>
+  <script src="views/device/pharmacie.js"></script>
   <script src="views/search/search.js"></script>
   <script src="views/details/company.js"></script>
   <script src="views/details/order.js"></script>
@@ -91,40 +92,40 @@
       <ion-content>
         <div class="item item-divider"></div>
         <a nav-clear class="item item-icon-left" ng-click="goTo('search')">
-          <i class="icon ion-search"></i>
+          <i class="icon ion-chatboxes" style="color:#9ACA27"></i>
           Journal
         </a>
 
         <a nav-clear class="item item-icon-left" ng-click="goTo('network')">
-          <i class="icon ion-person-add"></i>
+          <i class="icon ion-person-add" style="color:#3EB0FD"></i>
           Contacts
         </a>
 
         <a nav-clear class="item item-icon-left" ng-click="goTo('agenda')">
-          <i class="icon ion-calendar"></i>
+          <i class="icon ion-calendar" style="color:#0C56AB"></i>
           Agenda
         </a>
 
         <a nav-clear class="item item-icon-left" ng-click="goTo('device')">
-          <i class="icon ion-ios-pulse-strong"></i>
+          <i class="icon ion-medkit" style="color:#FC9F26"></i>
           Santé
         </a>
 
         <div class="item item-divider"></div>
         <a nav-clear class="item item-icon-left" ng-click="goTo('call')">
-          <i class="icon ion-android-call"></i>
+          <i class="icon ion-android-call" style="color:red"></i>
           Contacter un proche
         </a>
         </div>
 
-        <a nav-clear class="item item-icon-left" ng-click="goTo('mapTest')">
+<!--         <a nav-clear class="item item-icon-left" ng-click="goTo('mapTest')">
           <i class="icon ion-person-add"></i>
           MapTest
-        </a>
+        </a> -->
 
       </ion-content>
     </ion-side-menu>
   </ion-side-menus>
-<script src="http://maps.googleapis.com/maps/api/js?key=[YOUR_KEY_HERE]&sensor=true"></script>
+<!-- <script src="http://maps.googleapis.com/maps/api/js?key=[YOUR_KEY_HERE]&sensor=true"></script> -->
 </body>
 </html>

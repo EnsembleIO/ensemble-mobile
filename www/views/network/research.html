@@ -3,15 +3,28 @@
 	<ion-header-bar class="bar-subheader item-input-inset">
 		<label class="item-input-wrapper">
 			<i class="icon ion-search placeholder-icon"></i>
-			<input type="search" ng-submit="submit()" placeholder="Partager avec l'entourage de Margaux" ng-model="post" autofocus />
+			<input type="search" placeholder="Recherche" ng-model="search" ng-change="search_onchange()" autofocus>
 		</label>
 	</ion-header-bar> 
 
-<div class="list card">
+	<ion-content>
+		<div class="list">
+			<p ng-show="noresult" class="list-inset item item-icon-left">
+				<i class="icon ion-sad"></i>
+				Aucun résultat
+			</p>
+			<div class="item item-avatar my-item"
+				collection-repeat="item in items | filter:{nom:search}"
+				collection-item-width="'100%'"
+				collection-item-height="74"
+				ng-click="item_onclick(item)">
+				<img ng-src="{{url}}/images/medical/{{item.type}}.png" onerror="this.src='http://localhost:3000/images/people/Ensemble.png'">
+				<h2 style="display:inline;"><b>{{item.nom}}</b> {{item.prenom}}</h2>
 
-
-
-</div>
+				<h4>{{item.adresse}}</h4>   
+				<h4 style="color:#0C56AB"><i class="icon ion-ios-telephone"></i> {{item.telephone}}</h4>  
+			</div>
+		</div>
 
 </ion-content>
 </ion-view>

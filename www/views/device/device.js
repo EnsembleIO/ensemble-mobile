@@ -9,6 +9,11 @@ angular.module(_CONTROLLERS_).controller('device', function($scope, $state, BACK
 	        $state.go('activity');
 	    }
 	   
+	   $scope.pharmacie_onclick = function() {
+	        // Go to next screen
+	        $state.go('pharmacie');
+	    }
+
 	   $scope.frequence_onclick = function() {
 	        // Go to next screen
 	        $state.go('frequence');

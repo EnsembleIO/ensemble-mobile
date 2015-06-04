@@ -63,6 +63,11 @@
       templateUrl: 'views/device/frequence.html',
       controller: 'frequence'
     })
+    .state('pharmacie', {
+      url: '/pharmacie',
+      templateUrl: 'views/device/pharmacie.html',
+      controller: 'pharmacie'
+    })
     .state('call', {
       url: '/call',
       templateUrl: 'views/call/call.html',

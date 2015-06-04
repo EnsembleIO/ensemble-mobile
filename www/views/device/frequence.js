@@ -4,7 +4,7 @@ angular.module(_CONTROLLERS_).controller('frequence', function($scope, $ionicPla
 
    	$scope.topFrequence = {
         title: {
-            text: 'Monthly Average Tension',
+            text: 'Tension moyenne',
             x: -20 //center
         },
         subtitle: {
