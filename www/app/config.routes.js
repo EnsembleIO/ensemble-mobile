@@ -32,6 +32,11 @@
       url: '/invitation',
       templateUrl: 'views/network/invitation.html',
       controller: 'invitation'
+    })
+    .state('research', {
+      url: '/research',
+      templateUrl: 'views/network/research.html',
+      controller: 'research'
     })    
     .state('find', {
       url: '/find',

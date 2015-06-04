@@ -9,6 +9,13 @@ angular.module(_CONTROLLERS_).controller('network', function($scope, $state, BAC
 	        $state.go('invitation');
 	    }
 	   
+
+	   $scope.research_onclick = function() {
+	        // Go to next screen
+	        $state.go('research');
+	    }
+	   
+
 	   $scope.find_onclick = function() {
 	        // Go to next screen
 	        $state.go('find');
