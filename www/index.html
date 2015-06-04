@@ -58,6 +58,7 @@
   <script src="views/search/search.js"></script>
   <script src="views/details/company.js"></script>
   <script src="views/details/order.js"></script>
+  <script src="views/mapTest/mapTest.js"></script>
 </head>
 
 <body ng-controller="index">
@@ -116,9 +117,14 @@
         </a>
         </div>
 
+        <a nav-clear class="item item-icon-left" ng-click="goTo('mapTest')">
+          <i class="icon ion-person-add"></i>
+          MapTest
+        </a>
+
       </ion-content>
     </ion-side-menu>
   </ion-side-menus>
-
+<script src="http://maps.googleapis.com/maps/api/js?key=[YOUR_KEY_HERE]&sensor=true"></script>
 </body>
 </html>
