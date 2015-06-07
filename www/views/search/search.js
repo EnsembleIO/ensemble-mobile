@@ -86,11 +86,11 @@ app.controller('search', function($scope, $state, oauth2Token, beeSearch, curren
  		if (item) {
 	 		if (item._source.object.objectType == 'medical' || 
 	 			item._source.object.objectType == 'prescription') {
-	 			return "border-style:solid;border-color:#E10000;border-width:2px;background-color:#FFEEEE;height:120px;margin:-5px -5px -5px -5px"
+	 			return "border-style:solid;border-color:#E10000;border-width:2px;background-color:#FFA8A8;height:120px;margin:-5px -5px -5px -5px"
 	 		} else if (item._source.object.objectType == 'rendezvous') {
 	 			return "background-color:#B3CFF9;height:120px;margin:-5px -5px -5px -5px"
 	 		} else {
-	 			return "background-color:#ECF1F6;height:120px;margin:-5px -5px -5px -5px"
+	 			return "background-color:#BEBEBE;height:120px;margin:-5px -5px -5px -5px"
 	 		}
 	 	}
 	}
